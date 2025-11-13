@@ -1,0 +1,67 @@
+
+* , ::before ,::after {
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Sora', sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+    transition: background-color 1s 999999s;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding:0;
+    cursor: pointer;
+}
+
+a,img,button, input ,textarea , select,label{
+    font-family: inherit;
+    color:inherit;
+    outline: none;
+    border: none;
+}
+
+textarea {
+    border:none;
+}
+
+.icon-sidebar {
+    filter: var(--icon-color-sidebar);
+}
+
+i,em {
+    font-style: italic;
+}
+
+b,strong {
+    font-weight: 600;
+}
+
+u {
+    text-decoration: underline;
+}

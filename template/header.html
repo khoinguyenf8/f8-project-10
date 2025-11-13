@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="header__inner">
+        <!-- Search-Mobile -->
+        <div class="header__search d-none d-md-block">
+            <div class="header__search-row">
+                <img src="./assets/icons/aA.svg" alt="" class="header__search__text" />
+                <div class="header__search-wrap">
+                    <img src="./assets/icons/lock.svg" alt="" class="header__search-lock" />
+                    <img src="./assets/icons/logo.svg" alt="" class="header__search-logo" />
+                </div>
+
+                <img src="./assets/icons/retry.svg" alt="" class="header__search-retry" />
+            </div>
+        </div>
+
+        <div class="header__row">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="./">
+                    <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                </a>
+            </div>
+
+            <!-- Navbar -->
+            <nav class="header__navbar d-md-none">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="#home" class="header__navbar-link header__navbar-link--current">Home</a>
+                    </li>
+                    <li class="header__navbar-item"><a href="#guidlines" class="header__navbar-link">Guidlines</a></li>
+                    <li class="header__navbar-item"><a href="#product" class="header__navbar-link">Products</a></li>
+                    <li class="header__navbar-item"><a href="#new" class="header__navbar-link">Review</a></li>
+                </ul>
+            </nav>
+            <!-- Action -->
+            <div class="header__action">
+                <button class="header__action-btn btn btn--primary btn--outline btn--text">Sign In</button>
+            </div>
+
+            <!--Button-Menu-Mobile -->
+            <div class="menu-navbar js-toggle d-none d-md-block" toggle-target="#menu">
+                <img src="./assets/icons/hamburger-menu.svg" alt="" class="menu-navbar__img" />
+            </div>
+
+            <!-- Menu -->
+            <div id="menu" class="menu d-none d-md-block hide">
+                <!-- Logo -->
+                <div class="logo menu__logo">
+                    <a href="./">
+                        <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
+                    </a>
+                </div>
+
+                <!-- Navbar -->
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#!" class="menu__link">Home</a></li>
+                    <li class="menu__item"><a href="#!" class="menu__link">Products</a></li>
+                    <li class="menu__item"><a href="#!" class="menu__link">Guidlines</a></li>
+                    <li class="menu__item"><a href="#!" class="menu__link">Review</a></li>
+                </ul>
+            </div>
+
+            <!-- Overlay -->
+            <div id="overlay" class="menu__overlay d-none d-md-block"></div>
+        </div>
+    </div>
+</div>

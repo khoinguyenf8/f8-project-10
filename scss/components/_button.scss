@@ -1,0 +1,27 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    height:46px;
+    border-radius: 10px;
+
+    &--primary {
+        background: var(--bg-btn);
+    }
+
+    &--outline {
+        border: 1px solid var(--action-border-btn);
+    }
+
+    &--text {
+        background:var(--bg-btn);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+}

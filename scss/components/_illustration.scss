@@ -1,0 +1,231 @@
+@use "../abstracts";
+.illustration {
+    background:  var(--body-primary-color);
+    padding:70px 0  0 0;
+
+    &__inner {
+
+    }
+
+    &__top {
+
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        max-width:493px;
+        color: var(--Text-Color-white, #F9F9F9);
+        font-size: 4.0rem;
+        font-weight: 600;
+        line-height: 125%;
+        margin-bottom: 23px;
+
+        & strong {
+            background: var(--bg-btn);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @include abstracts.screen(lg) {
+            max-width: 400px;
+        }
+
+        @include abstracts.screen(md) {
+            max-width: 100%;
+            font-size: 3.0rem;
+            line-height: 133.333%;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__btn {
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 100%;
+        padding-top:25px;
+        padding-bottom:25px;
+        min-width:218px;
+        border-radius: 12px;
+        border: 2px solid #36383E;
+
+        @include abstracts.screen(md) {
+            font-size: 1.2rem;
+            line-height: 150%;
+            padding-top:12px;
+            padding-bottom:12px;
+            min-width:135px;
+            border-radius: 9px;
+        }
+    }
+
+    &__bottom {
+
+        &--inner {
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+
+            @include abstracts.screen(lg) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap:15px;
+        padding:45px 0 65px;
+
+        @include abstracts.screen(xl) {
+            padding-right:50px;        
+        }
+
+        @include abstracts.screen(lg) {
+            padding-right:0px;        
+        }
+
+        @include abstracts.screen(md) {
+            padding: 0 0 70px 0;   
+        }
+    }
+
+    &__group {
+        width:493px;
+        padding:30px 65px 37px 40px;
+        background: transparent; 
+        border-radius: 15px;
+        border: 2px solid var(--text-color-gray-2);
+        transition: all 0.3s linear;
+        margin-right: auto;
+
+        @include abstracts.screen(lg) {
+            width:100%;  
+        }
+
+        @include abstracts.screen(md) {
+            padding:18px 50px 8px 26px;
+        }
+
+        &:hover {
+            background: var(--text-color-gray-2);
+        }
+
+        &--title {
+            color: var(--text-color-white);
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: normal;
+
+            @include abstracts.screen(md) {
+                font-size: 1.8rem;
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                flex-shrink: 0;
+                border-radius: 50%;
+                background: var(--illustration-color);
+                margin-left: 6px;
+            }
+        }
+
+        &--desc {
+            color: var(--Text-Color-gray-1, #858B93);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 150%;
+            margin-top:10px;
+
+            @include abstracts.screen(md) {
+                font-size: 1.0rem;
+                line-height: 220%;
+            }
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        @include abstracts.screen(lg) {
+            display: flex;
+            gap:30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @include abstracts.screen(lg) {
+            gap:30px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--img {
+            width: 348px;
+            height: 263px;
+            flex-shrink: 0;
+            border-radius: 31px;
+            position: absolute;
+            filter: brightness(70%);
+            transition: filter 0.2s linear;
+
+            @include abstracts.screen(xl) {
+                transform: scale(0.9);
+            }
+
+            @include abstracts.screen(lg) {
+                transform: scale(1);
+                position:initial;
+                width:60%;
+                height:initial;
+                object-fit: contain;
+            }
+
+            @include abstracts.screen(md) {
+                width:80%;
+                height:initial
+            }
+
+            &:hover {
+                filter: brightness(100%);
+            }
+
+            &-1 {
+                top:0;
+                left:0;
+
+                @include abstracts.screen(lg) {
+                }
+            }
+
+            &-2 {
+                right:0;
+                top:50%;
+                transform: translateY(-50%);
+
+                @include abstracts.screen(lg) {
+                    transform: translateY(0);
+                }
+            }
+
+            &-3 {
+                bottom:0;
+                left:50%;
+                transform: translateX(-50%);
+
+                @include abstracts.screen(lg) {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+}

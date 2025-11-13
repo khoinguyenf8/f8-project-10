@@ -1,0 +1,161 @@
+@use "../abstracts";
+.metrics {
+    background: var(--body-primary-color);
+    padding:140px 0;
+
+    @include abstracts.screen(md) {
+        padding:40px 0;
+    }
+
+    &-gutter {
+        --grid-gutter-y:120px;
+    }
+
+    &-left {
+
+        &__heading {
+            color: var(--text-color-white);
+            font-size: 4.0rem;
+            font-weight: 600;
+
+            @include abstracts.screen(md) {
+                font-size: 3.0rem;
+                padding:0 30px;
+                text-align:center;
+            }
+
+            & strong {
+                background: var(--bg-btn);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        &__desc {
+            max-width: 537px;
+            color: var(--text-color-gray);
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height:162.5%;
+            padding:22px 0 86px;
+
+            @include abstracts.screen(md) {
+                font-size: 1.2rem;
+                text-align: center;
+                padding:10px 0 37px;
+            }
+
+            @include abstracts.screen(sm) {
+                font-size: 1.2rem;
+                text-align: center;
+                padding:10px 40px 37px;
+            }
+        }
+
+        &__list {
+            display: flex;
+            align-items: center;
+            gap:17px;
+
+            @include abstracts.screen(md) {
+                position: relative;
+                justify-content: center;
+                gap:50px;
+            }
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap:16px;
+            width:132px;
+            height:127px;
+            flex-shrink: 0;
+            border-radius: 9px;
+            background: var(--Text-Color-dark-blue, #272633);
+            transition: scale 0.2s linear;
+
+            @include abstracts.screen(md) {
+                width: 104px;
+                height: 98px;
+                flex-shrink: 0;
+            }
+
+            &--current {
+                background: linear-gradient(192deg, #C4F566 -43.72%, #AE8EF9 -5.87%, #EF8F00 52.36%, #61E559 122.78%);
+
+                @include abstracts.screen(md) {
+                    position: absolute;
+                    top:56px;
+                    left:50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &:hover {
+                scale: 1.05;
+
+                @include abstracts.screen(md) {
+                    scale: none;
+                }
+            }
+        }
+
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:28px;
+        }
+
+        &__number {
+            color: var(--text-color-white);
+            font-size: 3.0rem;
+            font-weight: 600;
+
+            @include abstracts.screen(md) {
+                font-size: 2.0rem;
+            }
+        }
+
+        &__text {
+            color: var(--text-color-gray);
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height:162.5% ;
+
+            @include abstracts.screen(md) {
+                font-size: 1.2rem;
+            }
+
+            &--current {
+                color: var(--text-color-white);
+            }
+        }
+    }
+
+    &-right {
+        display: flex;
+        align-items: center;
+        width:100%;
+        height:100%;
+
+        &__img {
+            width:100%;
+            object-fit: contain;
+
+            @include abstracts.screen(lg) {
+                transform: scale(1.1);
+            }
+
+            @include abstracts.screen(md) {
+                transform: scale(1);
+            }
+        }
+    }
+}
